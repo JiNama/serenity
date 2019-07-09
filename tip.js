@@ -18,7 +18,6 @@ $('#tipButton').click(function (e) {
 
         $('.popupMenu').animate({opacity: 1}, 400)
         $('.all').css({'filter':'brightness(10%)', 'transition':'all 0.3s ease-out'})
-
         window.addEventListener('scroll', noScroll)
         setTimeout(() => {
             enabled = true

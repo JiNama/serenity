@@ -160,19 +160,6 @@ input:focus{
     pointer-events: all;
 }
 
-@media screen and (min-width: 0) and (max-width: 840px){
-    .popupMenu{
-        width: 400px;
-        height: 530px;
-    }
-    .popupMenu>h3{
-        font-size: 20px;
-    }
-    .popupMenu>p{
-        font: 10px;
-    }
-}
-
 .popupMenu>h3{
     font-size: 40px;
     padding: 0;
@@ -189,4 +176,36 @@ input:focus{
 .all{
     width: 100%;
     height: 100%;
+}
+
+@media screen and (min-width: 0) and (max-width: 840px){
+    .popupMenu{
+        width: 300px;
+        height: 480px;
+    }
+    .popupMenu>h3{
+        font-size: 30px;
+    }
+    .popupMenu>p{
+        font-size: 18px;
+    }
+    .serenityImage{
+        width: 320px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .grid-container{
+        margin-top: 20px;
+        grid-gap: 20px;
+    }
+    .styledButtonLeft{
+        width: 150px;
+        margin-left: auto;
+        border: 4px solid white;
+    }
+    .styledButtonRight{
+        width: 150px;
+        margin-right: auto;
+        border: 4px solid white;
+    }
 }
