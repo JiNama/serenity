@@ -1,0 +1,192 @@
+@font-face{
+    font-family: timeless;
+    src: url('resources/fonts/Timeless.ttf');
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.background{
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-image: url('resources/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.serenityImageGrid{
+    display: grid;
+    width: 100%;
+}
+
+.serenityImage{
+    width: 500px;
+    height: 300px;
+    justify-self: center;
+    margin-top: 50px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: absolute;
+}
+
+.styledButtonLeft{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    justify-self: end;
+    white-space: normal;
+    border-width: 5px;
+    border: 5px solid white;
+    font-family: timeless;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.styledButtonRight{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    justify-self: start;
+    white-space: normal;
+    border: 5px solid white;
+    font-family: timeless;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.styledButtonLeft:hover{
+    color: #dadada;
+    border-color: #dadada;
+}
+
+.styledButtonRight:hover{
+    color: #dadada;
+    border-color: #dadada;
+}
+
+.styledButtonLeft:active{
+    color: #afafaf;
+    border-color: #afafaf;
+}
+
+.styledButtonRight:active{
+    color: #afafaf;
+    border-color: #afafaf;
+}
+
+input:focus{
+    outline: none;
+}
+
+.tip{
+    color: white;
+    font-family: timeless;
+    margin: 5px;
+    font-size: 20px;
+    text-align: end;
+    margin-top: 0;
+}
+
+.styledButtonTip{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    width: 80px;
+    justify-self: end;
+    white-space: normal;
+    border-width: 5px;
+    border: 3px solid white;
+    font-family: timeless;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    margin: 10px;
+}
+
+.styledButtonTip:hover{
+    color: #dadada;
+    border-color: #dadada;
+}
+
+.styledButtonTip:active{
+    color: #afafaf;
+    border-color: #afafaf;
+}
+
+.popupMenu{
+    top: 50%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(27, 27, 27, 0.473);
+    border: 5px solid white;
+    color: white;
+    font-family: timeless;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    pointer-events: all;
+}
+
+@media screen and (min-width: 0) and (max-width: 840px){
+    .popupMenu{
+        width: 400px;
+        height: 530px;
+    }
+    .popupMenu>h3{
+        font-size: 20px;
+    }
+    .popupMenu>p{
+        font: 10px;
+    }
+}
+
+.popupMenu>h3{
+    font-size: 40px;
+    padding: 0;
+    margin: 20px;
+}
+
+.popupMenu>p{
+    font-size: 20px;
+    padding: 20px;
+    padding-top: 0;
+    margin: 0;
+}
+
+.all{
+    width: 100%;
+    height: 100%;
+}
