@@ -1,16 +1,11 @@
 // Bool for whether or not popup is open
 let enabled = false
 
-// Function that returns scroll to top
-function noScroll(){
-    window.scrollTo(0, 0)
-}
 
 // When "tip!" button is clicked, bring up tip menu
 $('#tipButton').click(function (e) { 
     e.preventDefault()
     if (enabled == false){
-        noScroll()
         $('.popupMenu').css('visibility', 'visible')
         $('.grid-container').css('pointer-events', 'none')
         $('.popupMenu').animate({opacity: 1}, 400)
