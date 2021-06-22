@@ -1,16 +1,20 @@
 // Bool for whether or not popup is open
 let enabled = false
 
+// Function that returns scroll to top
+function noScroll(){
+    window.scrollTo(0,0)
+}
 
 // When "tip!" button is clicked, bring up tip menu
-$('#tipButton').click(function (e) { 
+$('#tipButton').click(function (e) {
     e.preventDefault()
     if (enabled == false){
+        window.addEventListener('scroll', noScroll)
         $('.popupMenu').css('visibility', 'visible')
         $('.grid-container').css('pointer-events', 'none')
         $('.popupMenu').animate({opacity: 1}, 400)
         $('.all').css({'filter':'brightness(20%)', 'transition':'all 0.3s ease-in'})
-        $('.background').css('position', 'fixed')
         setTimeout(() => {
             enabled = true
         }, 1)
@@ -21,11 +25,11 @@ $('#tipButton').click(function (e) {
 $('.all').click(function (e) {
     e.preventDefault()
     if (enabled == true){
+        window.removeEventListener('scroll', noScroll)
         $('.popupMenu').animate({opacity: 0}, 400)
         $('.grid-container').css('pointer-events', 'all')
         enabled = false
         $('.all').css('filter', 'none')
-        $('.background').css('position', 'fixed')
         setTimeout(() => {
             $('.popupMenu').css('visibility', 'hidden')
         }, 400)
