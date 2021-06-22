@@ -10,6 +10,7 @@ $('#tipButton').click(function (e) {
         $('.grid-container').css('pointer-events', 'none')
         $('.popupMenu').animate({opacity: 1}, 400)
         $('.all').css({'filter':'brightness(20%)', 'transition':'all 0.3s ease-in'})
+        $('.background').css('position', 'fixed')
         setTimeout(() => {
             enabled = true
         }, 1)
@@ -24,6 +25,7 @@ $('.all').click(function (e) {
         $('.grid-container').css('pointer-events', 'all')
         enabled = false
         $('.all').css('filter', 'none')
+        $('.background').css('position', 'fixed')
         setTimeout(() => {
             $('.popupMenu').css('visibility', 'hidden')
         }, 400)
