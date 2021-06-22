@@ -3,16 +3,10 @@
     src: url('resources/fonts/Timeless.ttf');
 }
 
-html{
+html, body{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    margin: 0;
-}
-
-body{
-    height: 100%;
-    width: 100%;
     margin: 0;
 }
 
@@ -21,9 +15,8 @@ body{
     height: 100%;
     width: 100%;
     position: fixed;
-    background-image: url('resources/images/bg.jpg');
+    background-image: url('resources/images/bg.png');
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 .serenityImageGrid{
@@ -37,6 +30,7 @@ body{
     justify-self: center;
     margin-top: 40px;
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     background-color: rgba(10, 10, 10, 0.39);
 }
 
@@ -49,7 +43,7 @@ body{
     justify-items: center;
     align-items: center;
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     position: relative;
 }
 
@@ -109,11 +103,11 @@ input:focus{
 .tip{
     color: white;
     font-family: timeless;
-    margin-right: 15px;
+    margin-right: 0;
     font-size: 20px;
     position: absolute;
     width: 100%;
-    text-align: end;
+    text-align: start;
 }
 
 .styledButtonTip{
@@ -150,7 +144,7 @@ input:focus{
     position: fixed;
     width: 600px;
     height: 400px;
-    background-color: rgba(10, 10, 10, 0.39);
+    background-color: rgba(10, 10, 10, 0.9);
     border: 5px solid white;
     color: white;
     font-family: timeless;
@@ -186,7 +180,7 @@ input:focus{
     font-family: timeless;
     padding: 5px;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -245,6 +239,7 @@ input:focus{
     }
     .grid-container{
         margin-top: 20px;
+        margin-bottom: 20px;
         grid-gap: 25px;
     }
     .styledButtonLeft{
@@ -258,9 +253,8 @@ input:focus{
         border: 3px solid white;
         font-size: 20px;
     }
-    .body{
-        overflow-x: hidden;
-        width: 100%;
+    body, html{
+        /*tinker with overflow*/
     }
     .contact{
         font-size: 18px;
@@ -269,5 +263,9 @@ input:focus{
     }
     .contactContainer{
         width: inherit;
+    }
+    .footer{
+        position: fixed;
+        
     }
 }

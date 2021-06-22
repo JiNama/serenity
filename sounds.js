@@ -3,18 +3,30 @@ let heavyrainPlaying = false
 let softrainPlaying = false
 let thunderPlaying = false
 let oceanwavesPlaying = false
+let birdsPlaying = false
+let cricketsPlaying = false
+let crowPlaying = false
+let crowsPlaying = false
 
 // Import audio files
 let heavyrain = new Audio('resources/sounds/heavyrain.mp3')
 let softrain = new Audio('resources/sounds/softrain.mp3')
 let oceanwaves = new Audio('resources/sounds/oceanwaves.mp3')
 let thunder = new Audio('resources/sounds/thunder.mp3')
+let birds = new Audio('resources/sounds/birds.mp3')
+let crickets = new Audio('resources/sounds/crickets.mp3')
+let crow = new Audio('resources/sounds/singlecrow.mp3')
+let crows = new Audio('resources/sounds/manycrows.mp3')
 
 // Set volumes to zero
 heavyrain.volume = 0
 softrain.volume = 0
 oceanwaves.volume = 0
 thunder.volume = 0
+birds.volume = 0
+crickets.volume = 0
+crow.volume = 0
+crows.volume = 0
 
 // Play function
 function Play(audio){
@@ -76,5 +88,53 @@ $('#thunderButton').click(function (e) {
     } else {
         Pause(thunder)
         thunderPlaying = false
+    }
+});
+
+// Birds click event
+$('#birdsButton').click(function (e) { 
+    e.preventDefault()
+    if (birdsPlaying == false){
+        Play(birds)
+        birdsPlaying = true
+    } else {
+        Pause(birds)
+        birdsPlaying = false
+    }
+});
+
+// Crickets click event
+$('#cricketsButton').click(function (e) { 
+    e.preventDefault()
+    if (cricketsPlaying == false){
+        Play(crickets)
+        cricketsPlaying = true
+    } else {
+        Pause(crickets)
+        cricketsPlaying = false
+    }
+});
+
+// Crow click event
+$('#crowButton').click(function (e) { 
+    e.preventDefault()
+    if (crowPlaying == false){
+        Play(crow)
+        crowPlaying = true
+    } else {
+        Pause(crow)
+        crowPlaying = false
+    }
+});
+
+// Crows click event
+$('#crowsButton').click(function (e) { 
+    e.preventDefault()
+    if (crowsPlaying == false){
+        Play(crows)
+        crowsPlaying = true
+    } else {
+        Pause(crows)
+        crowsPlaying = false
     }
 });
