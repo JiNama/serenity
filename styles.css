@@ -60,6 +60,7 @@ body{
     height: 100px;
     justify-self: end;
     border: 5px solid white;
+    border-radius: 0;
     white-space: normal;
     font-family: timeless;
     backdrop-filter: blur(3px);
@@ -74,6 +75,7 @@ body{
     height: 100px;
     justify-self: start;
     border: 5px solid white;
+    border-radius: 0;
     white-space: normal;
     font-family: timeless;
     backdrop-filter: blur(3px);
@@ -124,6 +126,7 @@ input:focus{
     white-space: normal;
     border-width: 5px;
     border: 3px solid white;
+    border-radius: 0;
     font-family: timeless;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
