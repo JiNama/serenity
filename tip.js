@@ -9,6 +9,7 @@ function noScroll(){
 // When "tip!" button is clicked, bring up tip menu
 $('#tipButton').click(function (e) {
     e.preventDefault()
+    noScroll()
     if (enabled == false){
         window.addEventListener('scroll', noScroll)
         $('.popupMenu').css('visibility', 'visible')

@@ -36,7 +36,7 @@ function Play(audio){
 
 // Pause function
 function Pause(audio){
-    $(audio).animate({volume:0}, 500)
+    $(audio).animate({volume: 0}, 500)
     setTimeout(() => {
         audio.pause()
     }, 500)
@@ -138,3 +138,60 @@ $('#crowsButton').click(function (e) {
         crowsPlaying = false
     }
 });
+
+/* ---------------------
+Mute and volume controls
+--------------------- */
+
+// Boolean for whether or not all things are muted
+let muted = false
+
+function mute(){
+    if (!muted){
+        $(heavyrain).animate({volume: 0}, 500)
+        $(softrain).animate({volume: 0}, 500)
+        $(oceanwaves).animate({volume: 0}, 500)
+        $(thunder).animate({volume: 0}, 500)
+        $(birds).animate({volume: 0}, 500)
+        $(crickets).animate({volume: 0}, 500)
+        $(crow).animate({volume: 0}, 500)
+        $(crows).animate({volume: 0}, 500)
+        setTimeout(() => {
+            heavyrain.muted = true
+            softrain.muted = true
+            oceanwaves.muted = true
+            thunder.muted = true
+            birds.muted = true
+            crickets.muted = true
+            crow.muted = true
+            crows.muted = true
+            muted = true
+        }, 500)
+    }else{
+        heavyrain.volume = 0
+        softrain.volume = 0
+        oceanwaves.volume = 0
+        thunder.volume = 0
+        birds.volume = 0
+        crickets.volume = 0
+        crow.volume = 0
+        crows.volume = 0
+        heavyrain.muted = false
+        softrain.muted = false
+        oceanwaves.muted = false
+        thunder.muted = false
+        birds.muted = false
+        crickets.muted = false
+        crow.muted = false
+        crows.muted = false
+        muted = false
+        $(heavyrain).animate({volume: 1}, 500)
+        $(softrain).animate({volume: 1}, 500)
+        $(oceanwaves).animate({volume: 1}, 500)
+        $(thunder).animate({volume: 1}, 500)
+        $(birds).animate({volume: 1}, 500)
+        $(crickets).animate({volume: 1}, 500)
+        $(crow).animate({volume: 1}, 500)
+        $(crows).animate({volume: 1}, 500)
+    }
+}
